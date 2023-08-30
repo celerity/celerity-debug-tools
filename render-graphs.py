@@ -10,7 +10,7 @@ from tempfile import NamedTemporaryFile
 
 
 class PtyDotRenderer:
-    GRAPH_LABEL_RE = re.compile(rb'^digraph\b[^=}]*\blabel="([^"]*Graph[^"]*)"')
+    GRAPH_LABEL_RE = re.compile(rb'^digraph\b[^=}]*\blabel="([^"]*?Graph)')
     WHITESPACE_RE = re.compile(r'\s')
 
     def __init__(self, out_dir: str):
